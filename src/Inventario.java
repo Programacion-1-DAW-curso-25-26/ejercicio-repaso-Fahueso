@@ -135,16 +135,18 @@ public class Inventario {
         return productosCoindentes;
     }
 
-    public void eliminarPorCodigo(String cod) {
+    public boolean eliminarPorCodigo(String cod) {
         Iterator<ProductoInformatico> it = productos.iterator();
         while (it.hasNext()) {
             ProductoInformatico p = it.next();
             if (p.getCodigo().equals(cod)) {
                 it.remove();
+                return true;
             }
         }
 
+        return false;
     }
-    //metodos
+
 
 }

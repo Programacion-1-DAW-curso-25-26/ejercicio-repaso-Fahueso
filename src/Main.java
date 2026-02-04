@@ -53,8 +53,7 @@ public class Main {
                     mostrarInventarioOrdenadoPorPrecioAsc(inventario);
                     break;
                 case 10:
-                    String cod = "5";
-                    inventario.eliminarPorCodigo(cod);
+                    eliminarInventarioPorCodigo(sc,inventario);
                     break;
 
                 case 0:
@@ -71,6 +70,8 @@ public class Main {
 
         sc.close();
     }
+
+
 
 
     // ---------------------------------------
@@ -224,5 +225,18 @@ public class Main {
                 System.out.println(p);
             }
         }
+    }
+
+    private static void eliminarInventarioPorCodigo(Scanner sc,Inventario inv) {
+        sc.nextLine();
+        System.out.print("Código: ");
+        String cod = sc.nextLine();
+
+        if(inv.eliminarPorCodigo(cod)){
+            System.out.println("Producto eliminado.");
+        }else{
+            System.out.println("Código no válido");
+        }
+
     }
 }
