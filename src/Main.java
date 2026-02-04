@@ -52,6 +52,10 @@ public class Main {
                 case 9:
                     mostrarInventarioOrdenadoPorPrecioAsc(inventario);
                     break;
+                case 10:
+                    String cod = "5";
+                    inventario.eliminarPorCodigo(cod);
+                    break;
 
                 case 0:
                     System.out.println("Saliendo del programa...");
@@ -68,6 +72,7 @@ public class Main {
         sc.close();
     }
 
+
     // ---------------------------------------
     // MENÚ
     // ---------------------------------------
@@ -82,6 +87,8 @@ public class Main {
         System.out.println("7. Listar inventario completo");
         System.out.println("8. Listar productos sin stock");
         System.out.println("9. Mostrar inventario ordenado por precio (asc)");
+        System.out.println("10. Eliminar por codigo");
+
         System.out.println("0. Salir");
         System.out.println("--------------------------------------");
     }
